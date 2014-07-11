@@ -1,0 +1,12 @@
+{
+  "name": "workflow",
+  "version": "0.0.1",
+  "description": "Foundational project-workflow as a baseline.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "Blake Wilson",
+  "license": "ISC"
+}
