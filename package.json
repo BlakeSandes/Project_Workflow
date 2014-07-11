@@ -8,5 +8,9 @@
     "url": "?.git"
   },
   "author": "Blake Wilson",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-util": "^2.2.20"
+  }
 }
