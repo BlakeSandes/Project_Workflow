@@ -1,0 +1,8 @@
+/* line 1, ../components/sass/_base.scss */
+body {
+  background: teal;
+  color: orange;
+  font-weight: bold;
+  border: 1px solid blue;
+  text-align: center;
+}
