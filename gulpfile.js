@@ -3,7 +3,9 @@ var gulp = require('gulp'),
     coffee = require('gulp-coffee'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    gulpLoadPlugins = require('gulp-load-plugins'),
+    plugins = gulpLoadPlugins();
 
 var coffeeSources = ['components/coffee/*.coffee']
 var jsSources = ['components/scripts/*.js']
@@ -28,7 +30,8 @@ gulp.task('compass', function() {
     .pipe(compass({
       sass: 'components/sass',
       image: 'builds/development/images',
-      style: 'expanded'
+      style: 'expanded',
+      require: ['bourbon', 'neat']
     }))
     .on('error', gutil.log)
     .pipe(gulp.dest('builds/development/css'))
