@@ -1,1 +1,10 @@
-@import "_base.scss";
+
+@import "compass";
+@import "compass/reset";
+
+
+//Core partials
+@import "variables";
+@import "mixins";
+@import "base";
+@import "modules";
