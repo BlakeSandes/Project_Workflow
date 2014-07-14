@@ -283,3 +283,7 @@ table {
 }
 
 /*Core partials====*/
+/* line 1, ../components/sass/_base.scss */
+body {
+  background: orange;
+}

@@ -36,7 +36,7 @@ if (env==='development') {
 
  coffeeSources = ['components/coffee/*.coffee']
  jsSources = ['components/scripts/*.js']
- sassSources = ['components/sass/style.scss']
+ sassSources = ['components/sass/main.scss']
  htmlSources = [outputDir + '*.html']
  jsonSources = [outputDir + 'js/*.json']
 
