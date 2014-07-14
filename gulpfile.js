@@ -3,6 +3,7 @@ var gulp = require('gulp'),
     coffee = require('gulp-coffee'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
+    autoprefixer = require('gulp-autoprefixer'),
     connect = require('gulp-connect'),
     gulpLoadPlugins = require('gulp-load-plugins'),
     gulpif = require('gulp-if'),
@@ -11,6 +12,7 @@ var gulp = require('gulp'),
     jsonminify = require('gulp-jsonminify'),
     imagemin = require('gulp-imagemin'),
     pngcrush = require('imagemin-pngcrush'),
+    jshint = require('gulp-jshint'),
     concat = require('gulp-concat');
 
 var env,
@@ -52,6 +54,8 @@ gulp.task('js', function() {
     .pipe(browserify())
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(outputDir + 'js'))
+    //.pipe(jshint())
+    //.pipe(jshint.reporter('default'))
     .pipe(connect.reload())
 });
 
@@ -61,9 +65,10 @@ gulp.task('compass', function() {
       sass: 'components/sass',
       image: outputDir + 'images',
       style: sassStyle,
-      require: ['bourbon', 'neat']
+      require: ['bourbon', 'neat'],
     })
     .on('error', gutil.log))
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest(outputDir + 'css'))
     .pipe(connect.reload())
 });

@@ -1,7 +1,4 @@
 /* line 1, ../components/sass/_base.scss */
 body {
-  background: beige;
-  font-family: Helvetica, sans-serif;
-  color: purple;
-  border: 1px solid teal;
+  border-radius: 5px;
 }
