@@ -283,9 +283,3 @@ table {
 }
 
 /*Core partials====*/
-/* line 1, ../components/sass/_base.scss */
-body {
-  border: 1px solid red;
-  border-radius: 5px;
-  box-shadow: 1px 1px 1px grey;
-}
