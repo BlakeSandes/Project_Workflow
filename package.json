@@ -21,6 +21,7 @@
     "gulp-load-plugins": "^0.5.3",
     "gulp-connect": "^2.0.6",
     "gulp-if": "^1.2.2",
-    "gulp-uglify": "^0.3.1"
+    "gulp-uglify": "^0.3.1",
+    "gulp-minify-html": "^0.1.4"
   }
 }
